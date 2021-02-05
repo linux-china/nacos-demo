@@ -1,0 +1,5 @@
+GET http://localhost:8082/instances/server-app
+
+### remote rest api call
+GET http://localhost:8082/server-call
+
