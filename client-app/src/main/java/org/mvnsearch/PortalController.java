@@ -2,7 +2,6 @@ package org.mvnsearch;
 
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.ReactiveDiscoveryClient;
-import org.springframework.cloud.client.loadbalancer.reactive.ReactorLoadBalancerExchangeFilterFunction;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
@@ -28,7 +27,6 @@ public class PortalController {
         this.loadBalancedWebClientBuilder = webClientBuilder;
     }
 
-
     @GetMapping("/")
     public String index() {
         return "Hello";
@@ -45,6 +43,7 @@ public class PortalController {
                 .get()
                 .uri("http://server-app/")
                 .retrieve()
-                .bodyToMono(String.class);
+                .bodyToMono(String.class)
+                .map(s -> "Response from server-app: " + s);
     }
 }
