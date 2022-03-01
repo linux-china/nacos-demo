@@ -12,9 +12,9 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>1.8</java.version>
-        <spring-boot.version>2.5.10</spring-boot.version>
-        <spring-cloud.version>2020.0.5</spring-cloud.version>
-        <alibaba-spring-cloud.version>2021.1</alibaba-spring-cloud.version>
+        <spring-boot.version>2.6.4</spring-boot.version>
+        <spring-cloud.version>2021.0.1</spring-cloud.version>
+        <alibaba-spring-cloud.version>2021.0.1.0</alibaba-spring-cloud.version>
     </properties>
 
     <modules>
